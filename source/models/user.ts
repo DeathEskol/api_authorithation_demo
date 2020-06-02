@@ -15,7 +15,9 @@ const userSchema = new Schema({
         type: String,
         required: true
     }
-})
+},{ collection : 'MyNewName'})
+//How to force name collection
+//https://mongoosejs.com/docs/guide.html#collection
 
 // Methods
 userSchema.pre<UserInterface>('save', async function (next) {
